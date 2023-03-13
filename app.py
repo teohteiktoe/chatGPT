@@ -13,7 +13,7 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         t = request.form.get("txt")
-        openai.api_key = "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"
+        openai.api_key = "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"
         responce = openai.ChatCompletion.create(model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": t}])
         r = responce["choices"][0]["message"]["content"]
