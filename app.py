@@ -6,9 +6,8 @@
 
 from flask import Flask,render_template,request
 import openai
-import os
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
 
 app = Flask(__name__)
 
