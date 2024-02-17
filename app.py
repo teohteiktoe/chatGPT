@@ -2,9 +2,10 @@ from flask import Flask,render_template,request
 
 from openai import OpenAI
 
-client = OpenAI(
-    api_key="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",
-)
+# Set OpenAI API key and model
+import os
+openai_api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI(api_key=openai_api_key)
 
 app = Flask(__name__)
 
